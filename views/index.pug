@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  div(class="w3-row")
+    div(class="w3-col s4")
+      p Banner
+    div(class="w3-col s5 w3-center")
+      h2 Arquivo Musical Digital (Vnode)
+      h3 Banda de Música de Vila Verde
+        p Arquivo de partituras com várias formas de acesso de forma a permitir navegar nas partituras das peças para os vários instrumentos da banda.
+    div(class="w3-col s3 w3-padding")
+      p Agenda
+  div(class="w3-container w3-center")
+    h2(class="w3-light-grey") Últimas alterações ocorridas no arquivo
+  div(class="w3-container")
+    table(class="w3-table-all")
+      tr
+        th Data
+        th Descrição
+      each l in loglist
+        tr
+          td= l.data
+          td= l.desc
+  div(class="w3-container w3-teal w3-margin")
+    h5 Gearado por AMD WebApp de jcr
